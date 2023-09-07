@@ -1,40 +1,94 @@
 <!DOCTYPE html>
-<hmtl>
-    <head>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>McDonald's Menu</title>
+    <style>
 
-        <link rel="stylesheet" href="style.css">
-    </head>
-    <body>
-        <h1 style="color:red;"> Welcome To McDonald's</h1>
-        <h1> Here's Our Menu</h1>
+        header h1 {
+            color: red;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        table, th, td {
+            border: 1px solid black;
+        }
+
+        th, td {
+            padding: 8px;
+            text-align: left;
+        }
+
+        body {
+            background-color:antiquewhite; 
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome To <span style="color: red;">McDonald's</span></h1>
+        <h2>Here's Our Menu</h2>
+    </header>
+
+    <section class="menu-item">
+        <h3>Quarter Pounder</h3>
+        <img src="quarterpounder.jpeg" alt="Quarter Pounder" width="112" height="132">
+        <p>A Quarter Pounder with Cheese has 520 Calories.</p>
+        <button onclick="orderItem('quarterpounder')">Order One</button>
+    </section>
+    
+    <table>
+        <caption>Customize Your Burger</caption>
+        <tr>
+            <th>Cheese</th>
+            <th>Ham</th>
+            <th>Bread</th>
+        </tr>
         
-        <d1> 
-        <dt> Quarter Pounder</dt>
-        <img src="quarterpounder.jpeg" alt="Quarter Pounder" width="112" height="132"
-        <dd> A Quarter Pounder with Cheese has 520 Calories.</dd>
-        </d1>
+        <tr>
+            <td>None</td>
+            <td>None</td>
+            <td>None</td>
+        </tr>
+        <tr>
+            <td>Extra</td>
+            <td>Extra</td>
+            <td>Extra</td>
+        </tr>
+    </table>
+    
+    <section class="menu-item">
+        <h3>Ice Coffee</h3>
+        <img src="icedcofee.jpeg" alt="Ice Coffee" width="150" height="132">
+        <p>Ice Coffee has 140 Calories.</p>
+        <button onclick="orderItem('icecoffee')">Order One</button>
+    </section>
 
-        <button onclick="document.location='default.asp'">order one</button>
-        <table style ="width:100% ;border: 2px solid black";>
-            
-            <tr>
-                <th>Cheese</th>
-                <th>Ham</th>
-                <th>Bread</th>
-            </tr>
-            <tr>
-                <td>None</td>
-                <td>None</td>
-                <td>None</td>
-            </tr>
-            <tr>
-                <td>Extra</td>
-                <td>Extra</td>
-                <td>Extra</td>
-            </tr>
-        </table>
+    <table>
+        <caption>Customize Your Iced Coffee</caption>
+        <tr>
+            <th>Ice</th>
+            <th>Sugar</th>
+        </tr>
+        
+        <tr>
+            <td>Less</td>
+            <td>Less</td>
+        </tr>
+        <tr>
+            <td>Extra</td>
+            <td>Extra</td>
+        </tr>
+    </table>
 
-        <a href ="https://mcdonalds.co.id/">Untuk mencari lebih banyak menu lagi klik link dibawah ini </a>
-        <script src="script.js"> </script>
-    </head>
-</hmtl>
+    <footer>
+        <p>For more menu options, <a href="https://mcdonalds.co.id/">click here</a></p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
